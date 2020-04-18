@@ -1,9 +1,3 @@
-[gui]
-    recentrepo = /data/jtgs/wc1
-[user]
-    email = james.stevens@metaswitch.com
-    name = James Stevens
-
 [core]
     repositoryformatversion = 0
     filemode = false
