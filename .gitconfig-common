@@ -1,0 +1,61 @@
+[gui]
+    recentrepo = /data/jtgs/wc1
+[user]
+    email = james.stevens@metaswitch.com
+    name = James Stevens
+
+[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+    hideDotFiles = dotGitOnly
+    excludesfiles = ~/.gitignore
+    editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[alias]
+    st = status
+    co = checkout
+    c- = checkout --
+    br = branch
+    ci = commit
+    cm = commit -m
+    ca = commit -a
+    cam = commit -a -m
+    amend = commit --amend
+    l = log --graph --abbrev-commit --all --pretty=format:'%C(white)%h%Creset -%C(auto)%d%Creset %<|(100,trunc)%s %C(yellow bold)<%an>%Creset'
+    lol = log --graph --oneline --all --decorate
+    meld = difftool --dir-diff
+    stauts = status
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	unstage = reset HEAD --
+	msw = \\!git-msw
+	test = test
+	test = echo hello world
+	patch = !git --no-pager diff --no-color
+	show-plain = !git --no-pager show --no-color
+[color]
+    ui = true
+[color "diff"]
+    old = red bold
+    new = green bold
+    meta = white reverse
+[color "status"]
+    added = green bold
+    changed = red bold
+    untracked = magenta bold
+    branch = bold
+    nobranch = red bold
+[color "branch"]
+    current = yellow green
+    remote = red bold
+[color "interactive"]
+    prompt = yellow bold
+    help = white
+[push]
+	default = simple
+[diff]
+    tool = meld
