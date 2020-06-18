@@ -25,12 +25,10 @@
     meld = difftool --dir-diff
     stauts = status
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	unstage = reset HEAD --
-	msw = \\!git-msw
-	test = test
-	test = echo hello world
-	patch = !git --no-pager diff --no-color
-	show-plain = !git --no-pager show --no-color
+    unstage = reset HEAD --
+    patch = !git --no-pager diff --no-color
+    show-plain = !git --no-pager show --no-color
+    pushnew = push -u origin HEAD
 [color]
     ui = true
 [color "diff"]
