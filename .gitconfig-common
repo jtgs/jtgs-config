@@ -49,5 +49,12 @@
     help = white
 [push]
 	default = simple
+# https://stackoverflow.com/questions/63810361/how-to-use-meld-as-git-mergetool-difftool-on-wsl2
 [diff]
     tool = meld
+[difftool "meld"]
+        cmd = meld \"$(wslpath -aw $LOCAL)\" \"$(wslpath -aw $REMOTE)\"
+[merge]
+        tool = meld
+[mergetool "meld"]
+        cmd = meld --auto-merge \"$(wslpath -aw $LOCAL)\" \"$(wslpath -aw $BASE)\" \"$(wslpath -aw $REMOTE)\" --output \"$(wslpath -aw $MERGED)\" --label=Local --label=Base --label=Remote --diff \"$(wslpath -aw $BASE)\" \"$(wslpath -aw $LOCAL)\" --diff \"$(wslpath -aw $BASE)\" \"$(wslpath -aw $REMOTE)\"
